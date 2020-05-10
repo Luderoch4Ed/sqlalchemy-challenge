@@ -11,7 +11,7 @@ from flask import Flask, jsonify
 
 
 
-engine = create_engine("sqlite:///hawaii.sqlite")
+engine = create_engine("sqlite:///Resources/hawaii.sqlite")
 
 
 Base = automap_base()
@@ -118,4 +118,4 @@ def stats(start=None, end=None):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
